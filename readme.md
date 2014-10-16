@@ -1,5 +1,7 @@
 ## Timer app in vanilla javascript
 
+[Here's](http://sethborden.github.io/timer/timer.html#10) a live demo.
+
 This thing is pretty much self documenting.
 
 Defaults to a 20 minute timer, double-click the time to change.
