@@ -1,0 +1,150 @@
+body {
+    background: #fff;
+}
+
+.wrapper {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20%;
+    width: 250px;
+    height: 250px;
+    position: relative;
+    background: #fff;
+}
+
+
+.wrapper .fill-block {
+    z-index: 400;
+    width: 50%;
+    height: 50%;
+    margin: 25% 0 0 25%;
+    border-radius: 100%;
+    position: absolute;
+    background: #fff;
+    border: 1px solid black;
+}
+
+.wrapper .out-block {
+    z-index: 400;
+    content: " ";
+    position: absolute;
+    background: transparent;
+    width: 100%;
+    height: 100%;
+    border-radius: 200px;
+    border: 1px solid black;
+}
+
+.wrapper .line {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    height: 0;
+    widtha: 0;
+    border-top: 2px solid black;
+}
+
+.wrapper .time {
+    font-family: 'Arial';
+    font-weight: bolder;
+    font-size: 32px;
+    cursor: pointer;
+    z-index: 500;
+    width: 50%;
+    height: 50%;
+    position: absolute;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 125px;
+    top: 25%;
+    left: 25%;
+    -webkit-user-select: none;
+}
+
+.wrapper .static-inset {
+    z-index: 200;
+    position: absolute;
+    left: 125px;
+    width: 0;
+    height: 0;
+    border-top: 32px solid transparent;
+    border-bottom: 31px solid transparent;
+    border-left: 15px solid #fff;
+    -webkit-animation: inset linear 1;
+    -webkit-animation-play-state: paused;
+}
+
+.wrapper .pie {
+    width: 50%;
+    height: 100%;
+    transform-origin: 100% 50%;
+    position: absolute;
+    background: #08c;
+}
+
+.wrapper .spinner {
+    border-radius: 100% 0 0 100% / 50% 0 0 50%;
+    z-index: 200;
+    border-right: none;
+    -webkit-animation: rota 10s linear 1;
+    -webkit-animation-play-state: paused;
+}
+
+.wrapper .spinner:after {
+    content: " ";
+    position: relative;
+    height: 0;
+    width: 0;
+    left: 125px;
+    border-top: 32px solid transparent;
+    border-left: 15px solid #08c;
+    border-bottom: 32px solid transparent;
+    border-right: 0;
+    display: block;
+}
+
+.wrapper .filler {
+    border-radius: 0 100% 100% 0 / 0 50% 50% 0;
+    left: 50%;
+    opacity 0;
+    z-index: 100;
+    -webkit-animation: opa 10s steps(1, end) 1 reverse;
+    -webkit-animation-play-state: paused;
+    border-left: none;
+}
+
+
+.wrapper .mask {
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    background: inherit;
+    opacity: 1;
+    z-index: 200;
+    -webkit-animation: opa 10s steps(1, end) 1;
+    -webkit-animation-play-state: paused;
+}
+
+.wrapper, .wrapper * {
+    box-sizing: border-box;
+}
+
+@-webkit-keyframes rota {
+    0%   {transform: rotate(0deg);}
+    100% {transform: rotate(360deg);}
+}
+
+@-webkit-keyframes color-shift {
+    0% {background: #08c;}
+    100% {background: red;}
+}
+
+@-webkit-keyframes inset {
+    0% {z-index: 400;}
+    100% {z-index: 100;}
+}
+
+@-webkit-keyframes opa {
+    0%        {opacity: 1;}
+    50%, 100% {opacity: 0;}
+}
